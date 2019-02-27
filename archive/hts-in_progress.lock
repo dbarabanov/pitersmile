@@ -1,0 +1,7 @@
+Mirror in progress since Wed, 27 Feb 2019 17:40:21 .. please wait!
+winhttrack http://pitersmile.com -O "/Users/dmitribarabanov/websites/a" -%v 
+To pause the engine: create an empty file named 'hts-stop.lock'
+PID=54613
+UID=501
+GID=501
+START=1551278421

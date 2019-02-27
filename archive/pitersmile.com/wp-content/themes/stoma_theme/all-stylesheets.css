@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Bootstrap */
+@import url("libs/bootstrap/css/bootstrap-grid.min.css");
+
+/* modal */
+@import url("libs/Magnific-Popup/dist/magnific-popup.css");
+
+
+
+/*ParallaxContentSlider*/
+@import url("libs/ParallaxContentSlider/css/style.css");
+
+/* owl-carousel */
+@import url("libs/owl-carousel/owl.carousel.css");
+@import url("libs/owl-carousel/owl.theme.css");
+@import url("libs/owl-carousel/owl.transitions.css");
+
+/* main */
+@import url("css/main.css");
+
+/* media */
+@import url("css/media.css");
