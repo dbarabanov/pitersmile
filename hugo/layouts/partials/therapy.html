@@ -1,0 +1,25 @@
+<table>
+	{{ range after 3 .}}
+		{{$name := ""}}
+		{{$price := ""}}
+		{{$header := ""}}
+		{{ range $i, $v := .}}
+				{{if eq $i 0}}
+					{{$header = $v}}
+				{{else if eq $i 1}}
+					{{$name = $v}}
+					{{with not $header}} {{$header = $v}} {{end}}
+				{{else if eq $i 3}}
+					{{$price = $v}}
+				{{end}}
+		{{end}}
+		{{with $price}}
+			<tr>
+				<td>{{$name}}: </td>
+				<td>{{$price}}</td>
+			</tr>
+		{{else}}
+			{{with $header}} <tr><td><h4>{{$header}}</h4></td></tr> {{end}}
+		{{end}}
+	{{ end }}
+</table>
