@@ -13,12 +13,12 @@
 				{{- $price = $v}}{{end}}
 			{{- end}}
 		{{- with $price}}
-			<tr>
-				<td>{{$name}}: </td>
-				<td>{{$price}}</td>
-			</tr>
+				<tr>
+					<td>{{safeHTML (htmlUnescape $name)}}</td>
+					<td>{{safeHTML (htmlUnescape (strings.Replace (strings.Replace $price "\u00A0" "") "₽" "<span class=\"rouble\">e</span>"))}}</td>
+				</tr>			
 		{{- else}}
 			{{- with $header}} <tr><td><h4>{{$header}}</h4></td></tr> {{end}}
 		{{- end}}
-	{{- end }}
+	{{- end}}
 	</table>
